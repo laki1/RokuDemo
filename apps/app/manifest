@@ -1,0 +1,28 @@
+# Demo channel application for Roku Streaming Stick 3500x with this hw limitations:
+#  - only one thread
+#  - only one ui and playback resolution - hd (1280x720px)
+#  - can use graphics transitions (OpenGL support)
+#  - os 9+
+#  - demo application is create only on these restrictions (not for other devices)
+
+title=24iDemo
+subtitle=24iDemo ROKU application
+
+major_version=1
+minor_version=0
+build_version=00001
+
+rsg_version=1.2
+
+ui_resolutions=hd
+
+mm_icon_focus_hd=pkg:/images/icon.png
+splash_screen_hd=pkg:/images/splash.png
+splash_color=#FB0046
+splash_min_time=2000
+
+requires_widevine_drm=1
+requires_widevine_version=1.0
+
+# Use DEBUG only in development version
+bs_const=DEBUG=true

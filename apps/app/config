@@ -1,0 +1,10 @@
+# MRL of VOD stream
+stream_mrl      = http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8
+
+# VOD DRM settings
+drm_type        = Widevine
+drm_stream_mrl  = https://storage.googleapis.com/wvmedia/cenc/h264/tears/tears.mpd
+drm_licence_url = https://proxy.uat.widevine.com/proxy?provider=widevine_test
+
+# BACKEND API
+api_base_url    = http://192.168.10.10:8080               
