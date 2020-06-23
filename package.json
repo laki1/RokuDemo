@@ -1,0 +1,27 @@
+{
+  "name": "24idemo",
+  "version": "1.0.0",
+  "description": "24iDemo ROKU application",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Honza Lacina",
+  "license": "ISC",
+  "devDependencies": {
+    "archiver": "^4.0.1",
+    "child_process": "^1.0.2",
+    "file-system": "^2.2.2",
+    "glob": "^7.1.6",
+    "gulp": "^4.0.2",
+    "gulp-mustache": "^5.0.0",
+    "gulp-preprocess": "^3.0.3",
+    "gulp-rm-lines": "0.0.10",
+    "normalize-path": "^3.0.0",
+    "parse-filepath": "^1.0.2",
+    "path": "^0.12.7",
+    "replace-in-file": "^6.1.0",
+    "roku-deploy": "^3.1.1",
+    "rooibos-preprocessor": "^4.0.0"
+  }
+}

@@ -1,0 +1,8 @@
+{
+	"outFile": 	"./app.zip",
+	"outDir": 	"./dist/",
+	"host": 	"192.168.10.95",
+	"username": "rokudev",
+	"password": "roku"
+}
+                                        
