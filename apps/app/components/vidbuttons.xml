@@ -1,0 +1,11 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+
+<component name="VidButtons" extends="MarkupList">
+
+	<interface>
+		<field id="mediabuttonpressed" type="assocarray" alwaysNotify="true"/>
+	</interface>
+
+	<script type="text/brightscript" uri="pkg:/components/vidbuttons.brs"/>
+
+</component>

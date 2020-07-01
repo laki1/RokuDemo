@@ -1,0 +1,174 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+
+<component name="MainScene" extends="Scene" >
+
+	<script type="text/brightscript" uri="pkg:/source/utils.brs" />
+    <script type="text/brightscript" uri="pkg:/source/registry.brs" />
+	<script type="text/brightscript" uri="pkg:/components/mainscene.brs" />
+	<script type="text/brightscript" uri="pkg:/components/data.brs" />
+	<script type="text/brightscript" uri="pkg:/components/list.brs" />
+    <script type="text/brightscript" uri="pkg:/components/detail.brs" />
+    <script type="text/brightscript" uri="pkg:/components/search.brs" />
+    <script type="text/brightscript" uri="pkg:/components/video.brs" />
+
+	<children>		
+		
+		<Group id="main">		
+        	<Group id="list" visible="false">
+			    <RowList 
+					id="contentList" 			
+					focusBitmapUri="pkg:/images/focus_grid.9.png"
+					translation="[-60, 240]"
+					itemSize="[1327, 300]"
+					numRows="3"
+					itemSpacing="[13, 4]"
+					focusXOffset="[217]"
+                    
+                    itemComponentName = "RowListItem"	                
+                    
+					rowTitleComponentName=""
+					rowFocusAnimationStyle="fixedFocusWrap"
+                    vertFocusAnimationStyle="floatingFocus"
+                    failedBitmapUri="pkg:/images/searched.png"
+					rowItemSize="[[180, 240]]"
+					rowItemSpacing="[[18, 6]]"
+					showRowLabel="true"
+					showRowCounter="true"
+					rowLabelOffset="[[217, 20]]" />												                    	
+			</Group>
+            
+			
+			<Group id="detail" visible="false">
+                <Rectangle
+                    width="1280"
+                    height="620"
+                    color="0xFB0046FF"
+                    translation="[0,100]" />
+                <Label
+					id="detailLabel"
+					height="60"
+					width="1100"
+					horizAlign="left"
+	  				vertAlign="center"
+					text=""
+					color="0xffffffff"
+					font="font:LargeBoldSystemFont"
+					translation="[60, 100]" />
+                <Poster
+                    id="detailPoster"
+                    uri=""
+                    width="320"
+                    height="426"
+                    translation="[60,180]" />
+                <ScrollableText 
+                    id="detailDescription"
+                    width="800"
+                    height="426"
+                    translation="[420,180]"
+                    font="font:SmallBoldSystemFont"
+                    text="Lorem ipsum dolor sit amet consectetuer turpis Proin in urna dolor. Laoreet Curabitur ut Phasellus nulla Cum dui Lorem enim non adipiscing. Curabitur iaculis Vestibulum Nulla condimentum nibh Quisque ligula id leo dui. Leo nec accumsan laoreet Curabitur mi condimentum porttitor velit neque Vestibulum. Aliquet laoreet urna metus sodales sed accumsan elit eget tempus Quisque. Vitae. Pellentesque dictum semper interdum ut tortor felis ante consectetuer fermentum quis. Libero ut consequat nibh hac aliquet Vestibulum id Sed Nam interdum. Orci turpis sem dignissim interdum tellus a odio tempor lacinia urna. Adipiscing nibh odio In mauris id nunc Nulla laoreet laoreet condimentum. Eget eleifend congue enim nisl mi non a congue In Maecenas. Elit justo. Ac justo montes tortor interdum egestas ipsum nec orci sit Aenean. Eget non ut leo dui vel elit ut et Lorem urna. Laoreet et leo sem eget neque condimentum at ac Aenean sapien. Faucibus Cras at id cursus congue Lorem senectus orci ac ut."
+                    horizAlign="left" 
+                    vertAlign="top" />
+                    
+                <!--RowList 
+					visible="true"
+                    id="detailSeriesList" 			
+					translation="[0, 0]"
+					itemSize="[1327, 300]"
+					numRows="1"
+					itemSpacing="[13, 4]"
+					focusXOffset="[217]"                                    	                                    					
+					rowItemSize="[[180, 240]]"
+					rowItemSpacing="[[18, 6]]"
+					showRowLabel="true"
+					showRowCounter="true"
+					rowLabelOffset="[[217, 20]]" / -->
+                                       
+                <LayoutGroup
+                    id="detailButtons"
+                    translation="[60,620]"
+                    layoutDirection="horiz">                                                                                              
+                    <Button
+                        id="detailBtnPlay"
+                        text="Play"
+                        height="60"                    
+                        iconUri="pkg:/images/play.png"
+                        focusedIconUri="pkg:/images/play2.png"
+                        textColor="0xffffffff" />                                                                            
+                    <Button
+                        id="detailBtnPlayFromPos"
+                        text="Play from last position"                        
+                        height="60"                                            
+                        iconUri="pkg:/images/play.png"
+                        focusedIconUri="pkg:/images/play2.png"
+                        textColor="0xffffffff" />                    
+                </LayoutGroup>
+			</Group>
+			
+			<Group id="loader" visible="false">
+				<Label
+					id="loaderText"
+					height="40"
+					width="1280"
+					horizAlign="center"
+	  				vertAlign="center"
+					text=""
+					color="0xffffffff"
+					font="font:MediumBoldSystemFont"
+					translation="[0, 486]" />
+				<BusySpinner
+					id="spinner"
+					translation="[534, 254]"
+					control="none"
+					clockwise="true"
+					spinInterval="2" >										
+				</BusySpinner>										
+			</Group>
+			
+			<Group id="error" visible="false">				
+				<Label
+					id="errorLabel"
+	  				height="44"
+	  				width="1200"
+	  				color="0xffffffff"
+	  				font="font:LargeBoldSystemFont"
+	  				text = "Error"
+	  				horizAlign = "center"
+	  				vertAlign = "center"
+  					translation="[40,240]" />
+				<Label
+					id="errorText"
+	  				height="88"
+	  				width="1200"
+	  				color="0x333333ff"
+	  				font="font:MediumBoldSystemFont"
+	  				text=""
+	  				horizAlign = "center"
+	  				vertAlign = "center"
+  					translation="[40,300]" />
+			</Group>                        
+		</Group>
+        <Group id="top" visible="true">    
+            <Rectangle
+  				height="74"
+  				width="1280"
+  				color="0xFB0046FF"  				
+  				translation="[0,0]" />
+			<Label
+				id="topLabel"
+  				height="44"
+  				width="0"
+  				color="0xffffffff"
+  				font="font:MediumBoldSystemFont"
+  				text=""
+  				horizAlign = "left"
+  				vertAlign = "center"
+  				translation="[40,20]">
+  				<Font role="font" uri="pkg:/fonts/candal.ttf" size = "40" />
+  			</Label>
+		</Group>
+        <Vid id="video" visible="false" />
+        <Timer id="videoTimer" repeat="true" duration="0" />
+	
+    </children>
+</component>

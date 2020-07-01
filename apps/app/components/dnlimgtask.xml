@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+ 
+<component name="dnlimgTask" extends="Task">
+ 
+	<interface>
+		<field id="token"    type="string" />
+		<field id="src"      type="string" />
+		<field id="dest"     type="string" />
+		<field id="dnlImage" type="assocarray" />		
+	</interface>
+	
+	<script type="text/brightscript" uri="pkg:/source/utils.brs" />
+	<script type="text/brightscript" uri="pkg:/components/dnlimgtask.brs" />
+ 
+</component>

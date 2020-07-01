@@ -1,0 +1,12 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+
+<component name="RowListItem" extends="Group">
+
+	<interface>
+		<field id="itemContent" type="node" onChange="showcontent"/>
+	</interface>
+
+	<script type="text/brightscript" uri="pkg:/source/utils.brs" />
+	<script type="text/brightscript" uri="pkg:/components/rowlistitem.brs"/>
+
+</component>

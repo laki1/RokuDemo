@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+ 
+<component name="datamanagerTask" extends="Task">
+ 
+	<interface>
+		<field id="baseurl"      type="string" />
+		<field id="request"      type="string" />
+		<field id="requestData"  type="assocarray" />
+		<field id="response"     type="string" alwaysNotify="true" />
+        <field id="responseData" type="string" alwaysNotify="true" />
+		<field id="error"        type="string" />
+		<field id="token"        type="string" />
+        <field id="silent"       type="Boolean" />
+	</interface>
+	
+	<script type="text/brightscript" uri="pkg:/source/utils.brs" />
+	<script type="text/brightscript" uri="pkg:/source/http.brs" />
+	<script type="text/brightscript" uri="pkg:/components/datamanager.brs" />
+ 
+</component>
