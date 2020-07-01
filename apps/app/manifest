@@ -1,6 +1,8 @@
 # Demo channel application for Roku Streaming Stick 3500x with this hw limitations:
 #  - only one thread
-#  - only one ui and playback resolution - hd (1280x720px)
+#  - only one ui and playback resolution - hd (1280x720px) 
+#    (it is not necessary to recalculate dimensions and using auto-naming metods 
+#     for images in uris)
 #  - can use graphics transitions (OpenGL support)
 #  - os 9+
 #  - demo application is create only on these restrictions (not for other devices)
